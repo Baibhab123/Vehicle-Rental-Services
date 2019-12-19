@@ -26,8 +26,6 @@ $sql=mysqli_query($conn,"SELECT NAME,V_TYPE FROM user_details WHERE USERID='$use
 if($user_check=="baibhab1234")
 {
 	?>
-<a href="add_vehicle.html"><button style="width: 100px; height: 100px;" onMouseOver="this.style.color='black' "onMouseOut="this.style.color='blue'">ADD VEHICLE DETAILS</button></a>	
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="user_details.php"><button style="width: 100px; height: 100px;" onMouseOver="this.style.color='black' "onMouseOut="this.style.color='blue'">VIEW USERS DETAILS</button></a>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="vehicle_details.php"><button style="width: 100px; height: 100px;" onMouseOver="this.style.color='black' "onMouseOut="this.style.color='blue'">VIEW VEHICLE DETAILS</button></a>
@@ -37,17 +35,9 @@ if($user_check=="baibhab1234")
 else
 {
 ?>
-<p style="font-size: 14pt; color:#b20b00;">Vehicle Type:
-<?php
-	if($row['V_TYPE']=='C')
-		echo "Car";
-	else if($row['V_TYPE']=='B')
-		echo "Bike";
-	else
-		echo "Scooty";
-?>
-</p>
 <a href="add_vehicle.html"><button style="width: 100px; height: 100px;" onMouseOver="this.style.color='black' "onMouseOut="this.style.color='blue'">ADD VEHICLE DETAILS</button></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="rent_vehicle.html"><button style="width: 100px; height: 100px;" onMouseOver="this.style.color='black' "onMouseOut="this.style.color='blue'">TAKE VEHICLE ON RENT</button></a>
 <?php
 }
 ?>
